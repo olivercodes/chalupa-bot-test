@@ -1,7 +1,7 @@
 # Dockerfile for creating a statically-linked Rust application using docker's
 # multi-stage build feature. This also leverages the docker build cache to avoid
 # re-downloading dependencies if they have not changed.
-FROM docker.io/rust:1.58.1-buster AS production-build
+FROM rust:1.60.0 AS production-build
 WORKDIR /usr/src
 
 RUN apt-get update
